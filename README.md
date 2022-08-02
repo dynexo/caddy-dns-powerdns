@@ -21,7 +21,7 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 			"provider": {
 				"name": "powerdns",
 				"api_token": "YOUR_PROVIDER_API_TOKEN",
-				"server": "YOUR_SERVER_ADDRESS"
+				"server": "YOUR_PROVIDER_SERVER_ADDRESS"
 			}
 		}
 	}
