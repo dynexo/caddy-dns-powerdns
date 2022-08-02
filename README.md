@@ -1,15 +1,4 @@
-**DEVELOPER INSTRUCTIONS:**
-
-- Update module name in go.mod
-- Update dependencies to latest versions
-- Update name and year in license
-- Customize configuration and Caddyfile parsing
-- Update godocs / comments (especially provider name and nuances)
-- Update README and remove this section
-
----
-
-\<PROVIDER\> module for Caddy
+powerdns module for Caddy
 ===========================
 
 This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with \<PROVIDER\>.
@@ -17,7 +6,7 @@ This package contains a DNS provider module for [Caddy](https://github.com/caddy
 ## Caddy module name
 
 ```
-dns.providers.provider_name
+dns.providers.powerdns
 ```
 
 ## Config examples
@@ -30,8 +19,9 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 	"challenges": {
 		"dns": {
 			"provider": {
-				"name": "provider_name",
-				"api_token": "YOUR_PROVIDER_API_TOKEN"
+				"name": "powerdns",
+				"api_token": "YOUR_PROVIDER_API_TOKEN",
+				"server": "YOUR_SERVER_ADDRESS"
 			}
 		}
 	}
@@ -43,13 +33,13 @@ or with the Caddyfile:
 ```
 # globally
 {
-	acme_dns provider_name ...
+	acme_dns powerdns ...
 }
 ```
 
 ```
 # one site
 tls {
-	dns provider_name ...
+	dns powerdns ...
 }
 ```
